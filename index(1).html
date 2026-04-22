@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Munagala Balaji — Data Analyst</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== CANVAS BACKGROUND ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <!-- FIX: logo text restored to "MB." (was inconsistently "Balaji.") -->
+    <div class="nav-logo">MB<span class="dot">.</span></div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero"     class="nav-link" data-section="hero">Home</a></li>
+      <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#resume"   class="nav-link" data-section="resume">Resume</a></li>
+      <li><a href="#insights" class="nav-link" data-section="insights">Insights</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge reveal">Data Analyst · BBA Graduate</div>
+      <h1 class="hero-name reveal">Munagala<br/><span class="gradient-text">Balaji</span></h1>
+      <p class="hero-tagline reveal">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
+      </div>
+      <div class="hero-scroll-hint reveal">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="orbit-ring ring-3"></div>
+      <div class="avatar-glow">
+        
+        <div class="avatar-inner" id="avatar-inner">MB</div>
+        <img
+          src="images/profile.jpg"
+          alt="Munagala Balaji"
+          class="profile-img"
+          onerror="this.style.display='none'; document.getElementById('avatar-inner').style.display='flex';"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-tag">01 / About</span>
+      <h2>Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text glass-card reveal">
+        <p>I'm a <strong>BBA Graduate</strong> with a sharp eye for data and a passion for
+        transforming raw numbers into meaningful business strategies. My work sits at the
+        intersection of <em>marketing intelligence</em>, <em>HR analytics</em>, and
+        <em>business insights</em>.</p>
+        <p>I believe data is only as powerful as the story it tells. Whether it's identifying
+        market trends, understanding workforce patterns, or uncovering customer behavior —
+        I turn complexity into clarity.</p>
+        <div class="about-tags">
+          <span class="tag">Marketing</span>
+          <span class="tag">HR Analytics</span>
+          <span class="tag">Business Intelligence</span>
+          <span class="tag">Data Storytelling</span>
+          <span class="tag">Strategic Thinking</span>
+        </div>
+      </div>
+     
+      <div class="about-stats reveal">
+        <div class="stat-card glass-card">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Domains Mastered</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Curiosity Level</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Data Driven</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-tag">02 / Skills</span>
+      <h2>My Toolkit</h2>
+    </div>
+    <div class="skills-grid">
+
+      <!-- Technical -->
+      <div class="skill-group glass-card reveal">
+        <h3 class="skill-group-title"><span class="skill-icon">⚙️</span> Technical Skills</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Microsoft Excel</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 85%"></div></div>
+          </div>
+        
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>SQL</span><span class="skill-pct">65%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 65%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Power BI</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 70%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Python (Basics)</span><span class="skill-pct">65%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 65%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Google Analytics</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 72%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business -->
+      <div class="skill-group glass-card reveal">
+        <h3 class="skill-group-title"><span class="skill-icon">📈</span> Business Skills</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Market Research</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 90%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Business Strategy</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 85%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>HR Analytics</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 80%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Data Reporting</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 78%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Consumer Behavior</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--level: 88%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft -->
+      <div class="skill-group glass-card reveal">
+        <h3 class="skill-group-title"><span class="skill-icon">🧠</span> Soft Skills</h3>
+        <div class="soft-skill-pills">
+          <div class="soft-pill">Critical Thinking</div>
+          <div class="soft-pill">Communication</div>
+          <div class="soft-pill">Problem Solving</div>
+          <div class="soft-pill">Attention to Detail</div>
+          <div class="soft-pill">Team Collaboration</div>
+          <div class="soft-pill">Adaptability</div>
+          <div class="soft-pill">Storytelling with Data</div>
+          <div class="soft-pill">Leadership</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-tag">03 / Projects</span>
+      <h2>Featured Work</h2>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 01 -->
+      <div class="project-card glass-card reveal">
+        <div class="project-front">
+          <div class="project-number">01</div>
+          <h3>Customer Churn Analysis</h3>
+          <p class="project-short">Predicting telecom customer churn using behavioral data patterns.</p>
+          <div class="project-tools">
+            <span>Excel</span><span>SQL</span><span>Power BI</span>
+          </div>
+        </div>
+        <div class="project-back">
+          <h3>Customer Churn Analysis</h3>
+          <p>Analyzed a dataset of 7,000+ telecom customers to identify churn triggers. Segmented
+          users by usage patterns and flagged at-risk profiles, enabling targeted retention campaigns.</p>
+          <div class="project-outcome">
+            <strong>Outcome:</strong> Identified 3 key churn predictors — reducing model churn
+            rate projection by 22%.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card glass-card reveal">
+        <div class="project-front">
+          <div class="project-number">02</div>
+          <h3>Advanced Excel for Data Analysis</h3>
+          <p class="project-short">Pivot Tables, VLOOKUP, data cleaning, and interactive
+          dashboards for business insights.</p>
+          <div class="project-tools">
+            <span>Excel</span><span>Pivot Tables</span><span>VLOOKUP</span>
+          </div>
+        </div>
+        <div class="project-back">
+          <h3>Advanced Excel for Data Analysis</h3>
+          <p>Performed data cleaning and analysis on a sales dataset using Advanced Excel. Built
+          interactive dashboards with Pivot Tables, charts, and slicers to identify sales trends,
+          top products, and regional performance.</p>
+          <div class="project-outcome">
+            <strong>Outcome:</strong> Identified top-performing regions and products, helping
+            improve sales strategy decisions.
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 03 -->
+      <div class="project-card glass-card reveal">
+        <div class="project-front">
+          <div class="project-number">03</div>
+          <h3>HR Attrition Dashboard</h3>
+          <p class="project-short">Interactive dashboard to visualize workforce attrition trends.</p>
+          <div class="project-tools">
+            <span>Power BI</span><span>Excel</span><span>Python</span>
+          </div>
+        </div>
+        <div class="project-back">
+          <h3>HR Attrition Dashboard</h3>
+          <p>Built a multi-page Power BI dashboard tracking employee satisfaction, department-level
+          attrition, and tenure-based risk scoring across 1,200 employee records.</p>
+          <div class="project-outcome">
+            <strong>Outcome:</strong> Gave HR teams actionable insight to reduce early exits by 15%.
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 04 -->
+      <div class="project-card glass-card reveal">
+        <div class="project-front">
+          <div class="project-number">04</div>
+          <h3>Marketing Campaign ROI</h3>
+          <p class="project-short">Evaluated the performance of multi-channel marketing campaigns.</p>
+          <div class="project-tools">
+            <span>Excel</span><span>Google Analytics</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="project-back">
+          <h3>Marketing Campaign ROI</h3>
+          <p>Tracked and compared ROI across email, social, and paid search campaigns. Built
+          attribution models to identify top-performing channels and seasonal patterns.</p>
+          <div class="project-outcome">
+            <strong>Outcome:</strong> Reallocated 30% of budget to highest-converting channels,
+            increasing overall ROI by 18%.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== RESUME ========== -->
+  <section id="resume">
+    <div class="section-header reveal">
+      <span class="section-tag">04 / Resume</span>
+      <h2>Education &amp; Credentials</h2>
+    </div>
+    <div class="resume-grid">
+      <div class="resume-col reveal">
+        <h3 class="resume-col-title">🎓 Education</h3>
+        <div class="timeline">
+          <div class="timeline-item glass-card">
+            <div class="timeline-year">2021 – 2024</div>
+            <h4>Bachelor of Business Administration</h4>
+            <p class="timeline-school">Specialization: Marketing</p>
+            <p>Graduated with distinction. Focused on marketing strategy, consumer behavior,
+            organizational behavior, and business analytics.</p>
+          </div>
+          <div class="timeline-item glass-card">
+            <div class="timeline-year">2019 – 2021</div>
+            <h4>Intermediate (MPC)</h4>
+            <p class="timeline-school">Board of Intermediate Education, Andhra Pradesh</p>
+            <p>Science stream with Mathematics, Physics, and Chemistry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="resume-col reveal">
+        <h3 class="resume-col-title">📜 Certifications</h3>
+        <div class="cert-list">
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <strong>Google Data Analytics Certificate</strong>
+              <p>Google / Coursera — In Progress</p>
+            </div>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <strong>Excel for Business Analytics</strong>
+              <p>Macquarie University / Coursera</p>
+            </div>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <strong>Power BI Fundamentals</strong>
+              <p>Microsoft Learn</p>
+            </div>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <strong>SQL for Data Science</strong>
+              <p>UC Davis / Coursera</p>
+            </div>
+          </div>
+        </div>
+        <div class="resume-download-wrap">
+          <a href="resume.pdf" download class="btn btn-primary">⬇ Download Full Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSIGHTS ========== -->
+  <section id="insights">
+    <div class="section-header reveal">
+      <span class="section-tag">05 / Insights</span>
+      <h2>Thoughts &amp; Ideas</h2>
+    </div>
+    <div class="insights-grid">
+
+      <article class="insight-card glass-card reveal">
+        <div class="insight-tag">Marketing</div>
+        <h3>Why Sentiment Analysis is the New Market Research</h3>
+        <p>Traditional surveys are slow and biased. Modern brands are mining social media and
+        review platforms using NLP models to get real-time sentiment — and the results are
+        reshaping product roadmaps.</p>
+        <div class="insight-meta">5 min read · April 2025</div>
+        <a href="#" class="insight-link">Read More →</a>
+      </article>
+
+      <article class="insight-card glass-card reveal">
+        <div class="insight-tag">HR Analytics</div>
+        <h3>The Hidden Cost of Employee Disengagement</h3>
+        <p>Disengaged employees cost businesses trillions annually. Yet most HR teams still rely
+        on annual surveys. Predictive attrition models and pulse-check data can transform how
+        companies retain talent.</p>
+        <div class="insight-meta">6 min read · March 2025</div>
+        <a href="#" class="insight-link">Read More →</a>
+      </article>
+
+      <article class="insight-card glass-card reveal">
+        <div class="insight-tag">Data Analysis</div>
+        <h3>From Spreadsheets to Stories: Data Visualization Done Right</h3>
+        <p>Numbers don't persuade — stories do. Effective dashboards don't just show data; they
+        guide decision-makers toward the insight they need. Here's how to design visualizations
+        that actually influence action.</p>
+        <div class="insight-meta">4 min read · February 2025</div>
+        <a href="#" class="insight-link">Read More →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="section-tag">06 / Contact</span>
+      <h2>Let's Connect</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item glass-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <a href="mailto:munagalabalaji133@gmail.com">munagalabalaji133@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <a href="tel:+919701292767">+91 9701292767</a>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/munagala-balaji-ab731a223"
+               target="_blank" rel="noopener">munagala-balaji</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form glass-card reveal" id="contact-form" novalidate>
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <input type="text" id="f-name" placeholder="Your Name" autocomplete="name"/>
+          <span class="form-error" id="err-name"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="f-email" placeholder="Your Email" autocomplete="email"/>
+          <span class="form-error" id="err-email"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="f-message" rows="5" placeholder="Your Message"></textarea>
+          <span class="form-error" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message 🚀</button>
+        <div class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">MB<span class="dot">.</span></div>
+      <p class="footer-tagline">Turning Business Data into Strategic Insights</p>
+      <div class="footer-socials">
+        <a href="mailto:munagalabalaji133@gmail.com" aria-label="Email">✉</a>
+        <a href="https://www.linkedin.com/in/munagala-balaji-ab731a223"
+           target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="tel:+919701292767" aria-label="Phone">📞</a>
+      </div>
+      <p class="footer-copy">© 2025 Munagala Balaji. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
